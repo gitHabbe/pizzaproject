@@ -1,10 +1,13 @@
+<?php include_once("../incl/util.php") ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?= $title ?></title>
+    <title><?= setTitle() ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/ico" href="../img/favicon.ico"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
 </head>
@@ -24,10 +27,10 @@
         </section>
         <div class="tabs is-centered is-large">
             <ul>
-                <li class="is-active"><a>Pictures</a></li>
-                <li><a>Music</a></li>
-                <li><a>Videos</a></li>
-                <li><a>Documents</a></li>
+                <li class=<?= isActive("index.php") ?>><a href="./index.php">Menu</a></li>
+                <li class=<?= isActive("spaceholder.php") ?>><a href="./spaceholder.php">Location</a></li>
+                <li class=<?= isActive("spaceholder.php") ?>><a href="./spaceholder.php">Staff</a></li>
+                <li class=<?= isActive("spaceholder.php") ?>><a href="./spaceholder.php">About us</a></li>
             </ul>
         </div>
     </header>
